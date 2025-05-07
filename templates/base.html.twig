@@ -10,9 +10,12 @@
 
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
+
         {% endblock %}
     </head>
     <body>
+        <img src="{{ asset('images/logo.png') }}" alt="Space Inviters Logo"/>
+
         {% block body %}{% endblock %}
     </body>
 </html>
