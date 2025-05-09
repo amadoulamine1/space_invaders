@@ -8,9 +8,10 @@
 		<h2 class="text-xl text-white font-semibold mb-6 px-2">
 			Planets
 		</h2>
-		<div>
-			{{ include('main/_planet_list.html.twig') }}
-		</div>
+
+			<turbo-frame id="planet-info">
+                {{ include('main/_planet_list.html.twig') }}
+            </turbo-frame>
 	</aside>
 	<section class="flex-1 ml-10">
 		<form method="GET" action="{{ path('app_homepage') }}" class="mb-6 flex justify-between">
