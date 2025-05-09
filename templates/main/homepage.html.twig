@@ -14,8 +14,8 @@
             </turbo-frame>
 	</aside>
 	<section class="flex-1 ml-10">
-		<form method="GET" action="{{ path('app_homepage') }}" class="mb-6 flex justify-between">
-			<input type="search" name="query" value="{{ app.request.query.get('query') }}" aria-label="Search voyages" placeholder="Search voyages" class="w-1/3 px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400">
+		<form method="GET" action="{{ path('app_homepage') }}" class="mb-6 flex justify-between" data-controller="autosubmit">
+			<input data-action="autosubmit#debouncedSubmit"  autofocus type="search" name="query" value="{{ app.request.query.get('query') }}" aria-label="Search voyages" placeholder="Search voyages" class="w-1/3 px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400">
 			<div class="whitespace-nowrap m-2 mr-4">
 				{{ voyages|length }}
 				results
